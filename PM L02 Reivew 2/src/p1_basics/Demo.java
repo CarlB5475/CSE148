@@ -1,7 +1,7 @@
 package p1_basics;
 
 public class Demo { // main class
-	static int i;
+	public static int i;
 	
 	public static void main(String[] args) {
 		
