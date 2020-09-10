@@ -3,7 +3,7 @@ package p2_arrays;
 public class Demo {
 
 	public static void main(String[] args) {
-		int[] numbers = new int[10];
+		int[] numbers = new int[10]; // new is used to create an object
 
 		numbers[0] = 10;
 		numbers[1] = 20;
