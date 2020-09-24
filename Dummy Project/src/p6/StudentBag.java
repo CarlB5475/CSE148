@@ -10,4 +10,14 @@ public class StudentBag {
 		arr = new Student[maxSize];
 		nElems = 0;
 	}
+	
+	public void insert(Student student) {
+		arr[nElems++] = student;
+	}
+
+	public void display() {
+		for(int i = 0; i < nElems; i++) {
+			System.out.println(arr[i]);
+		}
+	}
 }

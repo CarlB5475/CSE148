@@ -23,7 +23,7 @@ public class Student {
 		super();
 		this.name = new Name(fn, ln);
 		this.id = String.valueOf(idCounter++);
-		this.courses = courses;
+		
 	}
 	
 	
