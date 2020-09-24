@@ -17,22 +17,36 @@ public class Student {
 		this.id = String.valueOf(idCounter++);
 		this.courses = courses;
 	}
-	
-	
+
 	public Student(String fn, String ln) {
 		super();
 		this.name = new Name(fn, ln);
 		this.id = String.valueOf(idCounter++);
-		
 	}
-	
-	
+
+	public Name getName() {
+		return name;
+	}
+
+	public void setName(Name name) {
+		this.name = name;
+	}
+
+	public Course[] getCourses() {
+		return courses;
+	}
+
+	public void setCourses(Course[] courses) {
+		this.courses = courses;
+	}
+
+	public String getId() {
+		return id;
+	}
 
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", id=" + id + ", courses=" + Arrays.toString(courses) + "]";
 	}
-	
-	
 
 }
