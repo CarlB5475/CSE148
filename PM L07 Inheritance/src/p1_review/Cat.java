@@ -1,4 +1,4 @@
-package p1_classes;
+package p1_review;
 
 public class Cat { // public: access modifier. nothing: package access/default access
 	// private: these variables visible to objects of this class only
@@ -13,25 +13,6 @@ public class Cat { // public: access modifier. nothing: package access/default a
 	
 	//class variables or static variables
 	private static String category = "Cat";
-	
-	private final double INTEREST_RATE = 0.036;
-	
-	// overloaded constructor
-	public Cat(String name, boolean isMale, int age) {
-		this.name = name;
-		this.isMale = isMale;
-		this.age = age;
-	}
-	
-	public Cat(boolean isMale, String name, int age) {
-		this.name = name;
-		this.isMale = isMale;
-		this.age = age;
-	}
-	
-	public Cat() {
-		
-	}
 	
 	public String getCategory() {
 		return category;
