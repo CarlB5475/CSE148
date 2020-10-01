@@ -1,21 +1,31 @@
 package p3_inheritance_II;
 
 // superclass
-public class Person {
+public abstract class Person { // abstract class. not instantiable
 	private String name;
 	private String id;
 	private String phone;
 
 	private static int idCounter = 0;
 
+	// overloaded constructors
 	public Person(String name, String phone) {
 		this.name = name;
 		this.phone = phone;
 		this.id = String.valueOf(idCounter++);
 	}
+	
+	public Person() { // no-arg constructor
+		
+	}
 
-	public String getName() {
+	// overloaded methods
+	public String getName() { // final method
 		return name;
+	}
+	
+	public String getName(String prefix) {
+		return prefix + " " + name;
 	}
 
 	public void setName(String name) {

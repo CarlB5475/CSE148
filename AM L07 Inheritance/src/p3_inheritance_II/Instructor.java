@@ -8,6 +8,11 @@ public class Instructor extends Person {
 		this.salary = salary;
 	}
 
+	// Overriding method
+	public String getName() {
+		return "Professor " + super.getName();
+	}
+	
 	public double getSalary() {
 		return salary;
 	}

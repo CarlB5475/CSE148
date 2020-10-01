@@ -10,6 +10,15 @@ public class Student extends Person {
 		this.gpa = gpa;
 		this.major = major;
 	}
+	
+	// overriding method
+	public String getName(String prefix) {
+		return "Hi " + prefix + super.getName();
+	}
+	// overriding method
+	public String getName() {
+		return "Student " + super.getName();
+	}
 
 	public double getGpa() {
 		return gpa;
