@@ -7,6 +7,11 @@ public class Instructor extends Person {
 		super(name, phone);
 		this.salary = salary;
 	}
+	
+	// overriding
+	public String getName() {
+		return "Professor " + super.getName();
+	}
 
 	public double getSalary() {
 		return salary;

@@ -1,22 +1,31 @@
 package p3_inheritance_ii;
 
 // superclass, parent class, base class
-public class Person {
+public abstract class Person { // abstract class as opposed to concrete class
 	private String name;
 	private String id;
 	private String phone;
 
 	private static int idCounter = 0;
 
+	// overloaded methods
 	public Person(String name, String phone) {
 		super();
 		this.name = name;
 		this.phone = phone;
 		this.id = String.valueOf(idCounter++);
 	}
-
+	
+	public Person() {
+		
+	}
+	// overloaded methods
 	public String getName() {
 		return name;
+	}
+	
+	public String getName(String prefix) {
+		return prefix + "." + name;
 	}
 
 	public void setName(String name) {
