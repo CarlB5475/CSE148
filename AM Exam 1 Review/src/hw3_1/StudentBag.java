@@ -13,9 +13,21 @@ public class StudentBag {
 		arr[nElems++] = student;
 	}
 	
+	public void insertAll(Student[] a) {
+		for(int i = 0; i < a.length; i++) {
+			arr[nElems++] = a[i];
+		}
+	}
+	
+
+	public void insert(String fn, String ln, String major, double gpa) {
+		Student student = new Student(new Name(fn, ln), gpa, major);
+		arr[nElems++] = student;
+	}
+	
 	public Student removeById(String id) {
 		int i;
-		for(i = 0; i < nElems-1; i++) {
+		for(i = 0; i < nElems; i++) {
 			if(arr[i].getId().equals(id)) {
 				break;
 			}
@@ -25,7 +37,7 @@ public class StudentBag {
 			return null;
 		} else {
 			Student temp = arr[i];
-			for(int j = i; j < nElems; j++) {
+			for(int j = i; j < nElems-1; j++) {
 				arr[j] = arr[j+1];
 			}
 			nElems--;
@@ -39,10 +51,6 @@ public class StudentBag {
 		}
 	}
 	
-	public void insert(String fn, String ln, String major, double gpa) {
-		Student student = new Student(new Name(fn, ln), gpa, major);
-		arr[nElems++] = student;
-	}
 	
 	public Student findById(String id) {
 		for(int i = 0; i < nElems; i++) {
