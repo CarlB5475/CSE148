@@ -1,4 +1,4 @@
-package p3;
+package p4_private_inner_class;
 
 public class Student implements Comparable<Student> {
 	private String name;

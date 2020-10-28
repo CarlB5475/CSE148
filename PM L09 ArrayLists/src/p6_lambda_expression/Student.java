@@ -1,4 +1,4 @@
-package p3;
+package p6_lambda_expression;
 
 public class Student implements Comparable<Student> {
 	private String name;

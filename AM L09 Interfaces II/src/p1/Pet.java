@@ -1,6 +1,6 @@
 package p1;
 
-public class Pet {
+public abstract class Pet { // not concrete anymore
 	private String name;
 	private int age;
 
@@ -17,10 +17,12 @@ public class Pet {
 		super();
 	}
 	
-	public void setBoth(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
+//	public void setBoth(String name, int age) {
+//		this.name = name;
+//		this.age = age;
+//	}
+	
+	public abstract void setBoth(String name, int age);
 
 	public String getName() {
 		return name;

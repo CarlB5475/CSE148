@@ -1,8 +1,9 @@
-package p3;
+package p4_private_inner_class;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Demo {
@@ -21,7 +22,7 @@ public class Demo {
 		myList.add(s4);
 		
 		System.out.println(myList);
-		Collections.sort(myList, new StudentComparator());
+		Collections.sort(myList, (new Demo()).new StudentComparator());
 		System.out.println(myList);
 		
 		
@@ -30,8 +31,17 @@ public class Demo {
 		
 		Student[] students = {s1, s2, s3, s4};
 		System.out.println(Arrays.toString(students));
-		Arrays.sort(students, new StudentComparator());
+		Arrays.sort(students, (new Demo().new StudentComparator()));
 		System.out.println(Arrays.toString(students));
+	}
+	
+	private class StudentComparator implements Comparator<Student> {
+
+		@Override
+		public int compare(Student o1, Student o2) {
+			return Double.compare(o1.getGpa(), o2.getGpa());
+		}
+		
 	}
 
 }

@@ -1,4 +1,4 @@
-package p3;
+package p5_annonymous_class;
 
 public class Student implements Comparable<Student> {
 	private String name;

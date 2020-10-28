@@ -1,4 +1,4 @@
-package p3;
+package p6_lambda_expression;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +21,9 @@ public class Demo {
 		myList.add(s4);
 		
 		System.out.println(myList);
-		Collections.sort(myList, new StudentComparator());
+		Collections.sort(myList, (o1, o2) -> {
+			return o1.getName().compareTo(o2.getName());
+		});
 		System.out.println(myList);
 		
 		
@@ -30,7 +32,9 @@ public class Demo {
 		
 		Student[] students = {s1, s2, s3, s4};
 		System.out.println(Arrays.toString(students));
-		Arrays.sort(students, new StudentComparator());
+		Arrays.sort(students,(o1, o2) -> {
+			return Double.compare(o1.getGpa(), o2.getGpa());
+		});
 		System.out.println(Arrays.toString(students));
 	}
 
