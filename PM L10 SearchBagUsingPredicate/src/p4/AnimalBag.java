@@ -26,22 +26,24 @@ public class AnimalBag {
 //		}
 //		return null;
 //	}
-	
+
 	public Animal[] find(Predicate predicate) {
 		Animal[] tempArr = new Animal[nElems];
 		int matchCounter = 0;
-		for(int i = 0; i < nElems; i++) {
-			if(predicate.test(arr[i])) {
+		for (int i = 0; i < nElems; i++) {
+			if (predicate.test(arr[i])) {
 				tempArr[matchCounter++] = arr[i];
 			}
 		}
-		
+
 		return Arrays.copyOf(tempArr, matchCounter);
 	}
 
-	public void display() {
+	public void display(Predicate predicate) {
 		for (int i = 0; i < nElems; i++) {
-			System.out.println(arr[i]);
+			if (predicate.test(arr[i])) {
+				System.out.println(arr[i]);
+			}
 		}
 		System.out.println();
 	}
@@ -68,10 +70,10 @@ public class AnimalBag {
 
 	public Animal findWolfByPosition(int position) {
 		int counter = 0;
-		for(int i =0; i < nElems; i++) {
-			if(arr[i] instanceof Wolf) {
+		for (int i = 0; i < nElems; i++) {
+			if (arr[i] instanceof Wolf) {
 				counter++;
-				if(counter == position) {
+				if (counter == position) {
 					return arr[i];
 				}
 			}

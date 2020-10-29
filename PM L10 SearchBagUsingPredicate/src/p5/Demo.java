@@ -23,11 +23,16 @@ public class Demo {
 		theBag.insert(d1);
 		theBag.insert(d2);
 		
-		Animal[] arr = theBag.find((a) -> {
-			return ((Animal)a).getId() ==2;
+		theBag.display((a) -> {
+			return ((Animal)a).getName().equals("W2") && ((Animal)a).getAge() == 1.0;
 		});
-		System.out.println(Arrays.toString(arr));
 		
+		
+//		Animal[] arr = theBag.find((a) -> {
+//			return ((Animal)a).getName().equals("D2") || ((Animal)a).getAge() == 10.0;
+//		});
+//		System.out.println(Arrays.toString(arr));
+//		
 		
 //		Animal wolf2 = theBag.findWolfByPosition(2);
 //		int id = wolf2.getId();
