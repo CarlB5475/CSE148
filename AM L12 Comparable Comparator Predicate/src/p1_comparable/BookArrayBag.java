@@ -15,6 +15,22 @@ public class BookArrayBag {
 		arr[nElems++] = book;
 	}
 	
+//	public Book[] sort()) {
+//		Book[] tempArr = Arrays.copyOf(arr, nElems);
+//		Arrays.sort(tempArr, comparator);
+//		return tempArr;
+//	}
+	
+//	public void sort() {
+//		Arrays.sort(arr);
+//	}
+	
+	public Book[] sort() {
+		Book[] tempArr = Arrays.copyOf(arr, nElems);
+		Arrays.sort(tempArr);
+		return tempArr;
+	}
+	
 	public Book[] sort(Comparator<Book> comparator) {
 		Book[] tempArr = Arrays.copyOf(arr, nElems);
 		Arrays.sort(tempArr, comparator);

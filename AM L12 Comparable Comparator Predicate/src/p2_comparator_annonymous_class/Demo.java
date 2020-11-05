@@ -15,20 +15,30 @@ public class Demo {
 		arrBag.insert(b3);
 		
 		arrBag.display();
-		
 		Book[] arr = arrBag.sort(new Comparator<Book>() {
 
 			@Override
 			public int compare(Book o1, Book o2) {
-//				return o1.getTitle().compareTo(o2.getTitle());
-				return Double.compare(o1.getPrice(), o2.getPrice());
+				return o1.getTitle().compareTo(o2.getTitle());
 			}
 			
 		});
 		
-//		arrBag.display();
-		System.out.println("The sorted array is: ");
 		System.out.println(Arrays.toString(arr));
+		
+//		Book[] arr = arrBag.sort(new Comparator<Book>() {
+//
+//			@Override
+//			public int compare(Book o1, Book o2) {
+////				return o1.getTitle().compareTo(o2.getTitle());
+//				return Double.compare(o1.getPrice(), o2.getPrice());
+//			}
+//			
+//		});
+		
+//		arrBag.display();
+//		System.out.println("The sorted array is: ");
+//		System.out.println(Arrays.toString(arr));
 		
 	}
 	

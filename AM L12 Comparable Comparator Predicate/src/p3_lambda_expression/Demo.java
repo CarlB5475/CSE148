@@ -26,9 +26,9 @@ public class Demo {
 //			
 //		});
 
-		Book[] arr = arrBag.sort((Book o1, Book o2) -> {
-//			return Double.compare(o1.getPrice(), o2.getPrice());
-			return o1.getTitle().compareTo(o2.getTitle());
+		Book[] arr = arrBag.sort((Book o2, Book o1) -> {
+			return Double.compare(o1.getPrice(), o2.getPrice());
+//			return o1.getTitle().compareTo(o2.getTitle());
 		});
 
 //		arrBag.display();

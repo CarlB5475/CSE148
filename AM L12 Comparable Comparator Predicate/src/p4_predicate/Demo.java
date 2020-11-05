@@ -17,7 +17,8 @@ public class Demo {
 //		arrBag.display();
 		
 		Book[] matchedBooks = arrBag.search((Book b) -> {
-			return b.getTitle().equals("M") && b.getPrice() == 19.00;
+//			return b.getTitle().equals("M") && b.getPrice() == 19.00;
+			return b.getPrice() == 19.00;
 		});
 		
 		System.out.println(Arrays.toString(matchedBooks));
