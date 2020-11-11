@@ -10,15 +10,15 @@ public class Demo extends Object{
 			((Dog)d1).playTrick();
 			((Dog)d1).eat();
 			((Dog)d1).sleep();
-			d1.grow();
+//			d1.grow();
 			
 			System.out.println();
 			
 			System.out.println(c1);
-			c1.playTrick();
-			c1.eat();
-			c1.sleep();
-			c1.grow();
+//			c1.playTrick();
+//			c1.eat();
+//			c1.sleep();
+//			c1.grow();
 			System.out.println();
 		}
 		
