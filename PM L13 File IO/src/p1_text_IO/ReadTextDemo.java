@@ -10,11 +10,13 @@ public class ReadTextDemo {
 	public static void main(String[] args) {
 		ArrayList<String> firstNameList = new ArrayList<>();
 		ArrayList<String> lastNameList = new ArrayList<>();
+		
 		Scanner scanner = null;
 		try {
 		
 			File file = new File("data\\data.txt");
 			if(file.exists()) {
+			
 				
 			scanner = new Scanner(file);
 			
